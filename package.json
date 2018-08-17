@@ -4,7 +4,8 @@
   "description": "creating a blog post",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha --exit"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +13,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
