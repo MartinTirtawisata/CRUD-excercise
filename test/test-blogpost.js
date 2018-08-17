@@ -19,5 +19,5 @@ describe("Blog-post content", function(){
     });
 
 
-    testings
+    
 });
