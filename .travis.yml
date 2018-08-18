@@ -4,6 +4,6 @@ deploy:
   provider: heroku
   api_key:
     secure: uwnccf2ZKpYB+jsT/ZuJkuYlD3JAYgAICiJaTMQoAh227g77oBGR8WmXNdDyGwMXeKNxJAeCevI0x3f5s/J+qk6+DNJaDQ8kw0h4w75O6qUUsOyQ8kBk17xAUveePwC24aBYN4JZADIJLHaYXsItKVSK675b6jjeJycvTXUQrvVoS2jPjbaGIjMzQ24AA5FPc0R1U49w57c1D9O6ydgs5B9GyE5/aWh5flDjucRCIWhHoFKJg0YkO96WV9/7ks8hTqZ0Nn9UThuEiFfZH3J/nfJUQWyqaIoCY+2/fgfNQntDEoDihni6cmkVTVvdfm3WfPjoEO441YL6yOSrfLXUpjcKUVCiQTsYpZ4dI8/zBxjQ/o8r000AX7uX3KYs/KOHExmNUMxk4Sw/m/keolReArdqN56yGpS3S/cIyRfAcDpl0xsH7PcEQLsYwDNvp6qCNnAqXdvYmScjYKHUFq8HJbR0ywtrIWuKPkzyRJedqyRiteakq6LHt54XjSnoxyIZ69koKyeQ3kzSXVwgdh2IpL6sNtNB/qLXMp/tV+c9yCMpkxsGx6p9fqTD3w4mDmudKLi488WfbnzyUVJZZmPTUuuCt4jgLYSf1i8/HeAi1F9FzbAlkPiaV+WOO//JY+X20J3N3qAHEAam3hIuAnE8fgaigSAw4nefPgb3tEkrSqo=
-  app: https://git.heroku.com/murmuring-brushlands-80189.git
+  app: murmuring-brushlands-80189
   on:
     repo: MartinTirtawisata/blogpost-excercise
