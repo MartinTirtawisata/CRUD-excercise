@@ -18,12 +18,12 @@ let server;
 
 function runServer() {
     const myPort = process.env.PORT || 8080;
-    return new Promise ((resolve, reject), function() {
+    return new Promise (function(resolve, reject) {
         server = app.listen(myPort, function() {
             console.log(`Your app is listening to port ${myPort} !!!`)
             resolve(server);
         })
-        .on("error", err, function(){
+        .on("error", function(err){
             reject(err);
         });
     });
@@ -31,9 +31,9 @@ function runServer() {
 
 //?? Confused at this part ??
 function closeServer (){
-    return new Promise ((resolve, reject), function(){
+    return new Promise (function(resolve, reject){
         console.log("closing the server woohoo");
-        server.close(err, function(){
+        server.close(function(err){
             if (err) {
                 reject(err);
                 return;
@@ -44,7 +44,7 @@ function closeServer (){
 }
 //??what is require.main and module??
 if (require.amin === module){
-    runServer().catch(err, function(){ console.error(err)})
+    runServer().catch(function(err){ console.error(err)})
 }
 
 module.exports = {app, runServer, closeServer};
