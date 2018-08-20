@@ -9,22 +9,31 @@ app.use(morgan("common"));
 
 mongoose.Promise = global.Promise;
 
-const { Blogpost } = require('./models');
+const { Blogpost, Author } = require('./models');
 
 const {DATABASE_URL, PORT} = require('./config');
 
 //GET all
+// app.get('/posts', (req, res) => {
+//     Blogpost.find()
+//         .then((blogposts) => {
+//             res.json({
+//                 blogposts: blogposts.map((blogpost) => blogpost.serialize())
+//             });
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.status(500).json({message: "Internal server error"});
+//         });
+// });
 app.get('/posts', (req, res) => {
-    Blogpost.find()
-        .then((blogposts) => {
-            res.json({
-                blogposts: blogposts.map((blogpost) => blogpost.serialize())
-            });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({message: "Internal server error"});
-        });
+    Blogpost.find().populate('author').then(function(err, post){
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(post.author.firstName, post.author.lastName);
+        }
+    })
 });
 
 //GET by id
